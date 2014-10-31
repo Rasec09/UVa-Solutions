@@ -68,12 +68,12 @@ int main()
 		scanf("%d", &n);
 		if(n == 0) break;
 		cin.ignore();
-    for (int i = 0; i < n - 1; ++i) {
-      string s; getline(cin, s);
-      stringstream sin(s);
-      for (int a, b; sin >> a >> b;)
-        square[a - 1][b - 1] = i + 1;
-    }
+		for (int i = 0; i < n - 1; ++i) {
+			string s; getline(cin, s);
+			stringstream sin(s);
+			for (int a, b; sin >> a >> b;)
+		        	square[a - 1][b - 1] = i + 1;
+		 }
 		total = dfs_visitar(n);
 		if(total == n)
 			printf("good\n");
